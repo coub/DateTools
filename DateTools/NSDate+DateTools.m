@@ -212,7 +212,9 @@ static NSCalendar *implicitCalendar = nil;
                 return DateToolsLocalizedStrings(@"Last year");
             }
         case MonthsAgo:
-            if (isShort) {
+            if (isShort && value >= 2) {
+                return [self logicLocalizedStringFromFormat:@"%%d%@Ms" withValue:value];
+            } else if (isShort && value < 2) {
                 return [self logicLocalizedStringFromFormat:@"%%d%@M" withValue:value];
             } else if (value >= 2) {
                 return [self logicLocalizedStringFromFormat:@"%%d %@months ago" withValue:value];

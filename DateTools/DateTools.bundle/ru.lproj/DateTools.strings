@@ -133,6 +133,8 @@
 "%d_M" = "%d мес."; // month
 "%d__M" = "%d мес."; // month
 
+"%dMs" = "%d мес."; // month, plural
+
 "%dw" = "%d нед."; // week
 "%d_w" = "%d нед."; // week
 "%d__w" = "%d нед."; // week
